@@ -31,24 +31,24 @@
 
     <TextView
         android:id="@+id/station_layout"
-        android:layout_width="wrap_content"
+        android:layout_width="198dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="10dp"
         android:layout_toEndOf="@+id/train_image"
+        android:layout_toRightOf="@+id/train_image"
         android:text="දුම්රිය ස්ථානය"
         android:textColor="@android:color/black"
         android:textSize="15sp"
-        android:textStyle="bold"
-        android:layout_toRightOf="@+id/train_image" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/time_layout"
-        android:layout_width="wrap_content"
+        android:layout_width="129dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="190dp"
-        android:layout_marginLeft="190dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
         android:layout_marginTop="10dp"
         android:layout_toEndOf="@+id/station_layout"
         android:layout_toRightOf="@+id/station_layout"

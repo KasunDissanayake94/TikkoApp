@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.SplashScreen"
-    android:background="@color/backgroundColor">
+    android:background="@color/backgroundColor"
+    tools:context=".activity.SplashScreen">
 
     <ImageView
         android:id="@+id/imageView"
@@ -17,8 +17,20 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
-
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="238dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="76dp"
+        android:fontFamily="@font/bungee_inline"
+        android:text="TikkoApp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.589" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

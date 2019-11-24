@@ -2,6 +2,7 @@ package com.example.tikkoapp.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -33,6 +34,7 @@ public class SearchInformation extends AppCompatActivity {
     RecyclerView recyclerView;
     RecyclerView.Adapter adapter ;
     ProgressDialog progressDialog;
+    private Toolbar toolbar;
 
 
 
@@ -42,6 +44,10 @@ public class SearchInformation extends AppCompatActivity {
         setContentView(R.layout.activity_search_information);
          infoRef = FirebaseDatabase.getInstance().getReference("information");
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        toolbar = (Toolbar) findViewById(R.id.search_bar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("තොරතුරු සොයන්න");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(SearchInformation.this));
 

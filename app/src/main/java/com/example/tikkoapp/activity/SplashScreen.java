@@ -29,7 +29,7 @@ public class SplashScreen extends AppCompatActivity {
 
 
         final ImageView imageView = (ImageView) findViewById(R.id.imageView);
-        final Animation animation_1 = AnimationUtils.loadAnimation(getBaseContext(),R.anim.clockwise);
+        final Animation animation_1 = AnimationUtils.loadAnimation(getBaseContext(),R.anim.fade);
         playProgress();
 
         imageView.startAnimation(animation_1);

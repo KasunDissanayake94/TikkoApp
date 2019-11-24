@@ -2,6 +2,7 @@ package com.example.tikkoapp.activity;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.os.Build;
 import android.os.Bundle;
@@ -46,12 +47,18 @@ public class AddInformation extends AppCompatActivity {
     private String stationName;
     private String commentType;
     private String formattedDate;
+    private Toolbar toolbar;
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_information);
+
+        toolbar = (Toolbar) findViewById(R.id.infor_bar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("තොරතුරු ඇතුළු කරන්න");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         mDatabase = FirebaseDatabase.getInstance().getReference("station_name");
         mDatabase1 = FirebaseDatabase.getInstance().getReference("information");
