@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/information_single"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:weightSum="10">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/train_image"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_weight="0"
+        android:src="@drawable/train" />
+
+
+
+    <TextView
+        android:id="@+id/comment_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/station_layout"
+        android:layout_marginLeft="10dp"
+        android:layout_toEndOf="@+id/train_image"
+        android:padding="0dp"
+        android:text="අදහස"
+        android:textColor="#444444"
+        android:textSize="14sp"
+        android:layout_toRightOf="@+id/train_image" />
+
+    <TextView
+        android:id="@+id/station_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toEndOf="@+id/train_image"
+        android:text="දුම්රිය ස්ථානය"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_toRightOf="@+id/train_image" />
+
+    <TextView
+        android:id="@+id/time_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="190dp"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/station_layout"
+        android:layout_toRightOf="@+id/station_layout"
+        android:text="00:00"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/message_image_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/comment_layout"
+        android:layout_below="@+id/comment_layout"
+        android:layout_marginLeft="0dp"
+        android:layout_toEndOf="@+id/train_image"
+        android:padding="0dp"
+        android:scaleType="centerCrop"
+        android:layout_alignParentRight="true"
+        android:layout_alignLeft="@+id/comment_layout"
+        android:layout_toRightOf="@+id/train_image" />
+
+</RelativeLayout>

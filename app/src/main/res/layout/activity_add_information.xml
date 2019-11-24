@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AddInformation">
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="477dp"
+        android:layout_height="831dp"
+        android:alpha="0.1"
+        app:srcCompat="@drawable/train_ticket_image"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="5dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="204dp"
+        android:layout_height="45dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="ඇතුලත් කරන්න"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.906" />
+
+    <TextView
+        android:id="@+id/noteText"
+        android:layout_width="114dp"
+        android:layout_height="33dp"
+        android:text="ප්‍රතිචාර "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.117"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timeText"
+        app:layout_constraintVertical_bias="0.364" />
+
+    <TextView
+        android:id="@+id/timeText"
+        android:layout_width="114dp"
+        android:layout_height="33dp"
+        android:text="වේලාව"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.117"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.434" />
+
+    <TimePicker
+        android:id="@+id/timeSelect"
+        android:layout_width="211dp"
+        android:layout_height="158dp"
+        android:hint="වේලාව තෝරන්න"
+        android:timePickerMode="spinner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.43" />
+
+    <TextView
+        android:id="@+id/station"
+        android:layout_width="114dp"
+        android:layout_height="33dp"
+        android:text="දුම්රියපොළ"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/stationSpinner"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.257" />
+
+    <Spinner
+        android:id="@+id/stationSpinner"
+        android:layout_width="209dp"
+        android:layout_height="32dp"
+        android:autofillHints="දුම්රියපොළ තෝරන්න"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_centerInParent="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.257" />
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/comment"
+        android:layout_width="219dp"
+        android:layout_height="55dp"
+        android:hint="ප්‍රතිචාර නැත"
+        android:textSize="15dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.968"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timeSelect"
+        app:layout_constraintVertical_bias="0.191" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
