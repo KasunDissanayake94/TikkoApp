@@ -3,7 +3,9 @@ package com.example.tikkoapp.activity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.ObjectAnimator;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.animation.Animation;
@@ -44,9 +46,18 @@ public class SplashScreen extends AppCompatActivity {
             @Override
             public void onAnimationEnd(Animation animation) {
                 // This method will be executed once the timer is over
-                Intent i = new Intent(SplashScreen.this, PhoneNumberVerificationActivity.class);
-                startActivity(i);
-                finish();
+                SharedPreferences getpreferences = getSharedPreferences("userDetails", Context.MODE_PRIVATE);
+                Boolean isLoggedIn = getpreferences.getBoolean("isVerified",false);
+                if(isLoggedIn){
+                    Intent i = new Intent(SplashScreen.this, MainActivity.class);
+                    startActivity(i);
+                    finish();
+                }else{
+                    Intent i = new Intent(SplashScreen.this, PhoneNumberVerificationActivity.class);
+                    startActivity(i);
+                    finish();
+                }
+
             }
 
             @Override
