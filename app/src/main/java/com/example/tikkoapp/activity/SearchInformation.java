@@ -14,9 +14,12 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.tikkoapp.Notifications.Token;
 import com.example.tikkoapp.R;
 import com.example.tikkoapp.model.Information;
 import com.example.tikkoapp.util.RecyclerViewAdapter;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -35,6 +38,8 @@ public class SearchInformation extends AppCompatActivity {
     RecyclerView.Adapter adapter ;
     ProgressDialog progressDialog;
     private Toolbar toolbar;
+    private FirebaseUser firebaseUser;
+
 
 
 
@@ -48,6 +53,8 @@ public class SearchInformation extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("තොරතුරු සොයන්න");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+
 
         recyclerView.setLayoutManager(new LinearLayoutManager(SearchInformation.this));
 
@@ -103,6 +110,11 @@ public class SearchInformation extends AppCompatActivity {
 
 
 
+    }
+    private void updateToken(String token){
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Tokens");
+        Token token1 = new Token(token);
+        reference.child(firebaseUser.getUid()).setValue(token1);
     }
 
 

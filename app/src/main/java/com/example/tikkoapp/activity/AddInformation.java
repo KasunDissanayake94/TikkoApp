@@ -15,9 +15,13 @@ import android.widget.Spinner;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import com.example.tikkoapp.Notifications.Client;
+import com.example.tikkoapp.Notifications.Token;
 import com.example.tikkoapp.R;
 import com.example.tikkoapp.model.Information;
 import com.example.tikkoapp.model.Station;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -48,12 +52,16 @@ public class AddInformation extends AppCompatActivity {
     private String commentType;
     private String formattedDate;
     private Toolbar toolbar;
+    private APIService apiService;
+
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_information);
+//        apiService = Client.getClient("https://fcm.googleapis.com/").create(APIService.class);
+
 
         toolbar = (Toolbar) findViewById(R.id.infor_bar);
         setSupportActionBar(toolbar);
@@ -149,6 +157,8 @@ public class AddInformation extends AppCompatActivity {
                         }else{
                             Toast.makeText(AddInformation.this, "ඇතුලත් කිරීම අසාර්ථකයි!", Toast.LENGTH_LONG).show();
                         }
+
+
                     }
                 });
 
@@ -164,17 +174,6 @@ public class AddInformation extends AppCompatActivity {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
     }
+
 }

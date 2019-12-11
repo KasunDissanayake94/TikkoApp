@@ -7,7 +7,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.tikkoapp.Notifications.Client;
 import com.example.tikkoapp.R;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         insert = (CardView) findViewById(R.id.addInformation);
         search = (CardView) findViewById(R.id.searchInformation);
+
 
         insert.setOnClickListener(new View.OnClickListener() {
             @Override

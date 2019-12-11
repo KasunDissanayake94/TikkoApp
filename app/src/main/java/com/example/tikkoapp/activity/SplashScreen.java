@@ -44,7 +44,7 @@ public class SplashScreen extends AppCompatActivity {
             @Override
             public void onAnimationEnd(Animation animation) {
                 // This method will be executed once the timer is over
-                Intent i = new Intent(SplashScreen.this, MainActivity.class);
+                Intent i = new Intent(SplashScreen.this, PhoneNumberVerificationActivity.class);
                 startActivity(i);
                 finish();
             }
