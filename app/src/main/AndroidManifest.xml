@@ -9,14 +9,17 @@
         android:roundIcon="@drawable/train_ticket"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".activity.Settings"></activity>
+        <activity
+            android:name=".activity.UserProfile"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.PhoneNumberVerificationActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            ></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.AddInformation"
             android:parentActivityName=".activity.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.SearchInformation"
             android:parentActivityName=".activity.MainActivity"
@@ -35,7 +38,6 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-
     </application>
 
 </manifest>
