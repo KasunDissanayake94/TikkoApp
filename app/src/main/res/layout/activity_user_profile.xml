@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
     tools:context=".activity.UserProfile">
+    <include layout="@layout/app_tool_bar" android:id="@+id/infor_bar"/>
+
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/settings_image"

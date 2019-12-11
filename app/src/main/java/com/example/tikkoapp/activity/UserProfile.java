@@ -1,6 +1,7 @@
 package com.example.tikkoapp.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -38,11 +39,18 @@ public class UserProfile extends AppCompatActivity {
     private static final int MAX_LENGTH = 30;
     private StorageReference mImageStorage;
     private ProgressDialog mProgressDialog;
+    private Toolbar toolbar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
+
+        toolbar = (Toolbar) findViewById(R.id.infor_bar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("ගිණුම");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         mcurrentUser = FirebaseAuth.getInstance().getCurrentUser();
         String current_id = mcurrentUser.getUid();
