@@ -3,7 +3,9 @@ package com.example.tikkoapp.activity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -50,8 +52,7 @@ public class UserProfile extends AppCompatActivity {
         mName = (TextView) findViewById(R.id.settings_display_name);
         mTelephone = (TextView) findViewById(R.id.settings_telephone);
         circleImageView = (CircleImageView) findViewById(R.id.settings_image);
-        changeName = (Button) findViewById(R.id.change_image_btn);
-        changeImage = (Button) findViewById(R.id.change_image_btn);
+        changeName = (Button) findViewById(R.id.changeNameBtn);
 
         mImageStorage = FirebaseStorage.getInstance().getReference();
 
@@ -72,6 +73,17 @@ public class UserProfile extends AppCompatActivity {
 
             }
         });
+        changeName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String status_value = mName.getText().toString();
+
+                Intent status_intend = new Intent(UserProfile.this,Settings.class);
+                status_intend.putExtra("name",status_value);
+                startActivity(status_intend);
+            }
+        });
+
 
 
     }

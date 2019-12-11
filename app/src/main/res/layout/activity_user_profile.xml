@@ -23,7 +23,7 @@
         android:layout_below="@+id/settings_image"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="42dp"
-        android:text="Display Name"
+        android:text="නම"
         android:textColor="@android:color/white"
         android:textSize="30dp" />
 
@@ -34,7 +34,7 @@
         android:layout_below="@+id/settings_display_name"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="26dp"
-        android:text="Phone Number"
+        android:text="දුරකතන අංකය"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="20dp" />
@@ -44,7 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/white"
-        android:text="CHANGE IMAGE"
+        android:text="රූපය වෙනස් කරන්න"
         android:textColor="@color/colorPrimaryDark"
         android:layout_marginBottom="14dp"
         android:layout_above="@+id/changeNameBtn"
@@ -58,7 +58,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
-        android:text="CHANGE NAME"
+        android:text="නම වෙනස් කරන්න"
         android:textColor="@android:color/white"
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/settings_display_name"

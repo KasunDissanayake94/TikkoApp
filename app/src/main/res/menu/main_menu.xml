@@ -4,11 +4,11 @@
 
     <item
         android:id="@+id/report_button"
-        android:title="Report Issues" />
+        android:title="දෝෂ වාර්තාකරන්න" />
     <item
         android:id="@+id/main_account_Button"
-        android:title="Profile" />
+        android:title="ගිණුම" />
     <item
         android:id="@+id/main_logout_button"
-        android:title="Log Out" />
+        android:title="ගිණුමෙන් ඉවත්වෙන්න" />
 </menu>

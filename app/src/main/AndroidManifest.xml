@@ -9,10 +9,14 @@
         android:roundIcon="@drawable/train_ticket"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.Settings"></activity>
+        <activity
+            android:name=".activity.Settings"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".activity.UserProfile"></activity>
         <activity
             android:name=".activity.UserProfile"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".activity.MainActivity"/>
         <activity
             android:name=".activity.PhoneNumberVerificationActivity"
             android:theme="@style/AppTheme.NoActionBar" />

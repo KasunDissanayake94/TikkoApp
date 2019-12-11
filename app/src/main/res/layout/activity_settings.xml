@@ -6,35 +6,37 @@
     android:layout_height="match_parent"
     tools:context=".activity.Settings">
 
-    <include layout="@layout/app_tool_bar" android:id="@+id/status_tool_bar"/>
+    <include layout="@layout/app_tool_bar" android:id="@+id/infor_bar"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/status_tool_bar"
+        android:layout_below="@+id/infor_bar"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="51dp"
-        android:id="@+id/status_input">
+        android:id="@+id/field"
+        >
 
         <EditText
+            android:id="@+id/status_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter your name here" />
+            android:hint="නම ඇතුලත් කරන්න " />
     </LinearLayout>
 
     <Button
         android:id="@+id/status_change_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/status_input"
-        android:layout_alignRight="@+id/status_input"
-        android:layout_below="@+id/status_input"
+        android:layout_alignEnd="@+id/field"
+        android:layout_alignRight="@+id/field"
+        android:layout_below="@+id/field"
         android:layout_marginTop="48dp"
         android:backgroundTint="@color/colorAccent"
-        android:text="Save Changes"
+        android:text="සුරකින්න"
         android:textColor="@android:color/white" />
 
 
